@@ -30,6 +30,7 @@
  *  RAMPS_14_EFF (Hotend, Fan0, Fan1)
  *  RAMPS_14_EEF (Hotend0, Hotend1, Fan)
  *  RAMPS_14_SF  (Spindle, Controller Fan)
+ *  RAMPS_14_EAF  (Hotend, Auto Fan, Fan)
  *
  *  RAMPS_13_EFB (Hotend, Fan, Bed)
  *  RAMPS_13_EEB (Hotend0, Hotend1, Bed)
@@ -205,7 +206,7 @@
 //
 // Augmentation for auto-assigning RAMPS plugs
 //
-#if DISABLED(IS_RAMPS_EEB) && DISABLED(IS_RAMPS_EEF) && DISABLED(IS_RAMPS_EFB) && DISABLED(IS_RAMPS_EFF) && DISABLED(IS_RAMPS_SF) && !PIN_EXISTS(MOSFET_D)
+#if DISABLED(IS_RAMPS_EEB) && DISABLED(IS_RAMPS_EEF) && DISABLED(IS_RAMPS_EFB) && DISABLED(IS_RAMPS_EFF) && DISABLED(RAMPS_14_EAF) && DISABLED(IS_RAMPS_SF) && !PIN_EXISTS(MOSFET_D)
   #if HOTENDS > 1
     #if TEMP_SENSOR_BED
       #define IS_RAMPS_EEB
@@ -246,6 +247,10 @@
   #define HEATER_BED_PIN   RAMPS_D8_PIN
 #elif ENABLED(IS_RAMPS_EFF)                    // Hotend, Fan, Fan
   #define FAN1_PIN         RAMPS_D8_PIN
+#elif ENABLED(RAMPS_14_EAF)
+  #define FAN1_PIN         RAMPS_D8_PIN
+  #define E0_AUTO_FAN_PIN  RAMPS_D9_PIN
+  #define BEEPER_PIN       33
 #elif DISABLED(IS_RAMPS_SF)                    // Not Spindle, Fan (i.e., "EFBF" or "EFBE")
   #define HEATER_BED_PIN   RAMPS_D8_PIN
   #if HOTENDS == 1

@@ -42,6 +42,7 @@
 #define BOARD_RAMPS_14_EFF      45    // RAMPS 1.4 (Power outputs: Hotend, Fan0, Fan1)
 #define BOARD_RAMPS_14_EEF      46    // RAMPS 1.4 (Power outputs: Hotend0, Hotend1, Fan)
 #define BOARD_RAMPS_14_SF       48    // RAMPS 1.4 (Power outputs: Spindle, Controller Fan)
+#define BOARD_RAMPS_14_EAF      452   // RAMPS 1.4 (Power outputs: Hotend, Auto Fan, Fan)
 
 #define BOARD_RAMPS_PLUS_EFB   143    // RAMPS Plus 3DYMY (Power outputs: Hotend, Fan, Bed)
 #define BOARD_RAMPS_PLUS_EEB   144    // RAMPS Plus 3DYMY (Power outputs: Hotend0, Hotend1, Bed)
