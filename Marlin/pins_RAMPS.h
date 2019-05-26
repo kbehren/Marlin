@@ -251,7 +251,6 @@
   #define FAN_PIN          -1
   #define FAN1_PIN         RAMPS_D8_PIN
   #define E0_AUTO_FAN_PIN  RAMPS_D9_PIN
-  #define BEEPER_PIN       33
 #elif DISABLED(IS_RAMPS_SF)                    // Not Spindle, Fan (i.e., "EFBF" or "EFBE")
   #define HEATER_BED_PIN   RAMPS_D8_PIN
   #if HOTENDS == 1

@@ -34,6 +34,9 @@
 #define CONFIGURATION_ADV_H
 #define CONFIGURATION_ADV_H_VERSION 010109
 
+// Layer Cake has beeper on Pin 33.
+#define BEEPER_PIN 33
+
 // @section temperature
 
 //===========================================================================
